@@ -1,0 +1,4 @@
+Title: Vasculitis Management App
+Author: Himanshu Dashora
+DisplayMode: Showcase
+Type: Shiny
