@@ -1,6 +1,3 @@
-library(reshape2)
-library(ggplot2)
-
 stacked <- function(crop.output){
   
   map <- crop.output[[1]]

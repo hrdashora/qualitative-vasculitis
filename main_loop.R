@@ -1,8 +1,7 @@
-# This function is interates over all the angiographic regions in a CSV file, while calling on the relevant
-# scoring/cropping functions
-library(dplyr)
-library(readr)
-library(tibble)
+# This function is interates over all the angiographic regions in a CSV file, while
+# calling on the relevant scoring/cropping functions
+
+# Call helper scripts
 source("scoring.R")
 
 main_loop <- function(filepath){

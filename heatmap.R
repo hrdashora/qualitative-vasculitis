@@ -1,8 +1,3 @@
-library(reshape2)
-library(dplyr)
-library(tibble)
-library(ggplot2)
-
 heatmap <- function(crop.output){
   
   names.arg <- c("AscAo"="Ascend Aorta", "AorArch"="Aortic Arch", "DescAo"="Descend Aorta","AbdAo"="Abdom. Aorta",

@@ -1,6 +1,3 @@
-#library(reshape2)
-library(dplyr)
-
 stats <- function(crop.output){
   
   map <- crop.output[[1]]

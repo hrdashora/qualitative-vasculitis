@@ -1,3 +1,5 @@
+# This function scores the longitudinal angiography based on the values inputed in the CSV
+
 # 'Static Lesion': 0 -> 0 (score = 0), 1 -> 1S (score = -1)
 # 'Worse Lesion': 0 -> 1 (score = -3), 1 -> 1W (score = -2)
 # 'Improve Lesion': 1 -> 0 (score = 3), 1 -> 1B (score = 2)

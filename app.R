@@ -1,5 +1,14 @@
+# This script contains the Server and UI functions used to create an RShiny app
+
+# Import packages
 library(shiny)
-library(gridExtra)
+library(reshape2)
+library(dplyr)
+library(readr)
+library(tibble)
+library(ggplot2)
+
+# Call helper functions from other scripts
 source("main_loop.R")
 source("crop.R")
 source("heatmap.R")

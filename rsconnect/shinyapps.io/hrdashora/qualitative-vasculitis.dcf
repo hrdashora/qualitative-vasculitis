@@ -1,0 +1,12 @@
+name: qualitative-vasculitis
+title: qualitative-vasculitis
+username:
+account: hrdashora
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2447286
+bundleId: 3262416
+url: https://hrdashora.shinyapps.io/qualitative-vasculitis/
+when: 1591983846.88245
+asMultiple: FALSE
+asStatic: FALSE

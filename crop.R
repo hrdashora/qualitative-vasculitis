@@ -1,5 +1,5 @@
-library(dplyr)
-library(tibble)
+# This function crops the output matrix from the main scoring function according to
+# region and subtype selection
 
 crop <- function(loop.output, subtype = c("GCA","TAK"), region = "ALL"){
   

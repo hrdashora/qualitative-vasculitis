@@ -1,6 +1,3 @@
-library(dplyr)
-library(ggplot2)
-
 hist <- function(crop.output){
 
   tnt <- crop.output[[2]]
