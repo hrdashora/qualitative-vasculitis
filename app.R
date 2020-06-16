@@ -11,7 +11,7 @@ library(ggplot2)
 # Call helper functions from other scripts
 source("main_loop.R")
 source("scoring.R")
-source("overlay.R)")
+source("overlay.R")
 source("crop.R")
 source("heatmap.R")
 source("stacked.R")
