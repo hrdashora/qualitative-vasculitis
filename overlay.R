@@ -1,3 +1,12 @@
+overlay <- function(filepath){
+  f <- filepath
+  input <- read.csv(f, header = TRUE)
+  
+  # petvas$MRN <- NULL
+}
+
+
+
 # PET OVERLAY -------------------------------------------------------------
 
 
@@ -76,12 +85,3 @@ colnames(staticpairs) <- c("Predictor","Outcome")
 staticpairs[,1] <- as.numeric(staticpet)
 staticpairs[,2] <- "Static"
 #staticpairs[,2] <- factor(staticpairs[,2], levels = c("Worse","Static","Improve"))
-
-
-overlay <- function(filepath){
-  f <- filepath
-  petvas <- read.csv(f, header = TRUE)
-  matchlist <- petvas$MRN
-  row.names(petvas) <- matchlist
-  petvas$MRN <- NULL
-}

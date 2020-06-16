@@ -10,13 +10,15 @@ library(ggplot2)
 
 # Call helper functions from other scripts
 source("main_loop.R")
+source("scoring.R")
+source("overlay.R)")
 source("crop.R")
 source("heatmap.R")
 source("stacked.R")
 source("hist.R")
 source("stats.R")
 
-# Define UI for app that draws a histogram ----
+# Define UI for app ----
 ui <- fluidPage(
   
   # App title ----
@@ -83,7 +85,7 @@ ui <- fluidPage(
       
       # Input: Select a file ----
       fileInput(inputId = "pet",
-                label = "Choose PETVAS CSV File (NOT IMPLEMENTED)",
+                label = "Choose PETVAS CSV File", #PET Vascular Activity Score
                 multiple = FALSE,
                 accept = c("text/csv",
                            "text/comma-seperated-values,text'plain",
@@ -123,12 +125,21 @@ ui <- fluidPage(
 # Define server logic required ----
 server <- function(input, output) {
   
-  # Run the following function upon the pressing of the 'submit' button
+  # Run the following function upon the pressing of the AVaDaS'submit' button
   loop.output <- eventReactive(input$angio.submit,{
     req(input$angio) #require a filepath to be provided
     showModal(modalDialog("Loading...", footer = NULL)) #display a dialog box while the computation runs
     inFile <- input$angio
     output <- main_loop(inFile$datapath) #output list of 2 elements: 1) heatmap data, 2) subtype data
+    removeModal()
+    return(output)
+  })
+  
+  over.output <- eventReactive(input$pet.submit,{
+    req(input$angio, input$pet)
+    showModal(modalDialog("Loading...", footer = NULL))
+    inFile <- input$pet
+    output <- overlay(inFile$datapath)
     removeModal()
     return(output)
   })
